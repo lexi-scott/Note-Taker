@@ -1,15 +1,15 @@
-const notes = require('express').Router();
+const router = require('express').Router();
 const { readFromFile, readAndAppend } = require('../helpers/fsUtils');
 
-// GET Route for retrieving all the tips
-notes.get('/', (req, res) => {
+// GET Route for retrieving all the notes
+router.get('/notes', (req, res) => {
   console.log("test route")
   readFromFile('./db/db.json').then((data) => 
   
   {res.json(JSON.parse(data));console.log(JSON.parse(data))});
-});
+  });
 
-notes.post('/', (req, res) => {
+router.post('/notes', (req, res) => {
 
   const { title, text } = req.body;
   
@@ -26,4 +26,4 @@ notes.post('/', (req, res) => {
   }
 });
 
-module.exports = notes;
+module.exports = router;
