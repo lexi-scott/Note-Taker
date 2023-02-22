@@ -24,14 +24,14 @@
    
 
    ## License
-
-   ## License
       This project is licensed under the MIT license.
 
    ## How to Contribute
 
    Contact me at my email: lexiscott0101@gmail.com or on GitHub: lexi-scott
 
-   ## Tests
+   ## Links 
 
-   To run tests, use n/a
+   Github: https://github.com/lexi-scott/Note-Taker
+
+   image.png 
