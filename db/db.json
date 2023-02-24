@@ -10,5 +10,9 @@
     {
         "title": "another note",
         "text": "here is another note"
+    },
+    {
+        "title": "Deploy to Heroku",
+        "text": "Figure it out"
     }
 ]
