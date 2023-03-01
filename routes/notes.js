@@ -2,11 +2,14 @@ const router = require('express').Router();
 const { readFromFile, readAndAppend } = require('../helpers/fsUtils');
 
 // GET Route for retrieving all the notes
+// GET Route for retrieving all the notes
 router.get('/notes', (req, res) => {
   console.log("test route")
-  readFromFile('./db/db.json').then((data) => 
-  
-  {res.json(JSON.parse(data));console.log(JSON.parse(data))});
+  readFromFile('./db/db.json').then((data) => {
+        console.log(JSON.parse(data));
+        res.json(JSON.parse(data));
+       
+   });
   });
 
 router.post('/notes', (req, res) => {
