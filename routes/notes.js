@@ -1,10 +1,11 @@
 const router = require('express').Router();
 const { readFromFile, readAndAppend } = require('../helpers/fsUtils');
+const path = require('path')
 
 // GET Route for retrieving all the notes
 router.get('/notes', (req, res) => {
   console.log("test route")
-  readFromFile('../db/db.json').then((data) => {
+  readFromFile(path.join(__dirname,'../db/db.json')).then((data) => {
         console.log(JSON.parse(data));
         res.json(JSON.parse(data));
        
@@ -21,7 +22,7 @@ router.post('/notes', (req, res) => {
      text
     };
 
-    readAndAppend(newNote, './db/db.json');
+    readAndAppend(newNote, path.join(__dirname,'../db/db.json'));
     res.json(`Note added successfully 🚀`);
   } else {
     res.error('Error in adding note');
