@@ -5,7 +5,7 @@ const { readFromFile, readAndAppend } = require('../helpers/fsUtils');
 // GET Route for retrieving all the notes
 router.get('/notes', (req, res) => {
   console.log("test route")
-  readFromFile('./db/db.json').then((data) => {
+  readFromFile('../db/db.json').then((data) => {
         console.log(JSON.parse(data));
         res.json(JSON.parse(data));
        
